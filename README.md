@@ -30,13 +30,13 @@ $ gem install cocoapods
 ```
 
 **Podfile**
-To integrate AnyThinkiOS SDK into your Xcode project using CocoaPods, specify it in your Podfile:
+To integrate TPNSDKiOS SDK into your Xcode project using CocoaPods, specify it in your Podfile:
 
 ```shell
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
-target 'AnyThinkSDKDemo' do
+target 'You Project Name' do
       pod 'TPNSDKiOS','sdk_version'
 end
 ```
