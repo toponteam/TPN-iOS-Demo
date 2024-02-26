@@ -1,0 +1,100 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '13.0'
+project 'AnyThinkSDKDemo.xcodeproj'
+
+def share_pods
+  
+  pod 'Masonry'
+  pod 'SDWebImage'
+  pod 'MJRefresh'
+
+
+end
+
+target 'AnyThinkSDKDemo' do
+  
+  post_install do |installer|
+        installer.generated_projects.each do |project|
+          project.targets.each do |target|
+              target.build_configurations.each do |config|
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+               end
+          end
+        end
+      end
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+#  use_frameworks!
+  share_pods
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'TPNSDKiOS','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSAdmobAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSPangleAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSTTAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSFacebookAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSGDTAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSMintegralAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSApplovinAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSTapjoyAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSChartboostAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSUnityAdsAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSVungleAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSInmobiAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSIronSourceAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSMaioAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSNendAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSSigmobAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSStartAppAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSKidozAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSFyberAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSMyTargetAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSKuaiShouAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSBaiduAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSOguryAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSAdColonyAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSYandexAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSBigoAdapter','6.2.95'
+  pod 'TPNSDKiOS/TPNSDKiOSPubNativeAdapter','6.2.95'
+#  
+
+#https://topon-sdk-release.oss-cn-hangzhou.aliyuncs.com/SDK_Release/v6.2.95/iOS/TPNSDKiOS_mediation/TPNSDKiOS.zip
+  
+## 本地pod
+#  pod 'LocalThirdPartySDK/core', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/admob', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/applovin', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/baidu', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/chartboost', :path=> 'LSDK/'
+##  pod 'LocalThirdPartySDK/facebook', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/fyber', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/gdt', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/inmobi', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/ironsource', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/kidoz', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/kuaishou', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/maio', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/applovin', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/AppLovinMediationAdColonyAdapter', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/AppLovinMediationChartboostAdapter', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/AppLovinMediationTapjoyAdapter', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/mintegral', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/mobrain', :path=> 'LSDK/'
+##  pod 'LocalThirdPartySDK/mopub', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/MyTarget', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/nend', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/ogury', :path=> 'LSDK/'
+##  pod 'LocalThirdPartySDK/pangle_noChina', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/pangle_china_common', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/pangle_China', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/klevin', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/sigmob', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/startapp', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/tapjoy', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/unityads', :path=> 'LSDK/'
+#  pod 'LocalThirdPartySDK/vungle', :path=> 'LSDK/'
+
+end 
