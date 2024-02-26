@@ -66,7 +66,7 @@ $ pod install
 
 ## Integration instructions
 
-https://docs.toponad.com/#/en-us/ios/ios_doc/ios_sdk_config_access
+https://help.toponad.com/cn/docs/zJupzu
 
 
 ## LICENSE
